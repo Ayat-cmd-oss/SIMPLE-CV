@@ -1,0 +1,111 @@
+:root {
+    --deep-wine: lch(25.94% 34.9 1.73);
+    --paper-cream: oklab(95.612% -0.01197 0.03868);
+    --line-color: rgba(68, 20, 31, 0.15); /* Subtle wine-colored lines */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--deep-wine); /* Your Deep Wine color */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cv-container {
+    background: var(--paper-cream);
+    max-width: 900px;
+    width: 100%;
+    padding: 50px;
+    box-shadow:0 4px 15px hsla(302, 83%, 91%, 0.962);
+    border-radius: 4px; /* Slight roundness for a modern look */
+    border-top-color: 10px solid #2c3e50;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--deep-wine); /*   thick line maybe u want to change color */
+}
+
+header h1 {
+    color: var(--deep-wine);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* --- THE 2-COLUMN GRID --- */
+.cv-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Left column 1 part, Right column 2 parts */
+    gap: 40px;
+    position: relative;
+}
+
+/* --- THE VERTICAL LINE --- */
+.left-col {
+    border-right: 1px solid var(--line-color);
+    padding-right: 20px;
+}
+
+/* --- THE SECTOR BLOCKS (Horizontal Lines) --- */
+.sector {
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.sector:last-child {
+    border-bottom: none; /* No line at the very bottom */
+}
+
+h2 {
+    color: var(--deep-wine);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    /* Removed the blue border-left and added a clean look */
+}
+
+.item h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+/* Button style */
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    background: var(--deep-wine);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a !important; 
+   color: #f4f4f9
+}
+
+body.dark-mode .cv-container {
+    background-color: #2d2d2d;;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2 {
+    color: #f6f6f6; /* Light pink for dark mode */
+}
+
+body.dark-mode .sector,
+body.dark-mode .left-col {
+    border-color: rgba(255, 255, 255, 0.1);
+}
