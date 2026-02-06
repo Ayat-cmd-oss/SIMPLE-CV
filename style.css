@@ -1,7 +1,63 @@
+/* ===== Animations ===== */
+/* ===== Text pop up animation ===== */
+.text-pop-up-top {
+  -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #ccc,
+                 0 2px 0 #ccc,
+                 0 3px 0 #ccc,
+                 0 4px 0 #ccc,
+                 0 5px 0 #ccc,
+                 0 6px 0 #ccc,
+                 0 7px 0 #ccc,
+                 0 8px 0 #ccc,
+                 0 9px 0 #ccc,
+                 0 10px 0 #ccc;
+  }
+}
+
+@keyframes text-pop-up-top {
+  0% {
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    transform: translateY(-10px);
+    transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #ccc,
+                 0 2px 0 #ccc,
+                 0 3px 0 #ccc,
+                 0 4px 0 #ccc,
+                 0 5px 0 #ccc,
+                 0 6px 0 #ccc,
+                 0 7px 0 #ccc,
+                 0 8px 0 #ccc,
+                 0 9px 0 #ccc,
+                 0 10px 0 #ccc;
+  }
+}
+
+
 :root {
     --deep-wine: lch(25.94% 34.9 1.73);
     --paper-cream: oklab(95.612% -0.01197 0.03868);
-    --line-color: rgba(68, 20, 31, 0.15); /* Subtle wine-colored lines */
+    --line-color: #a22744d4; /* Subtle wine-colored lines */
 }
 
 body {
@@ -13,6 +69,9 @@ body {
     padding: 40px 20px;
     min-height: 100vh;
     transition: background-color 0.3s, color 0.3s;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px 20px;
 }
 
 .cv-container {
